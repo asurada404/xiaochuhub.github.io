@@ -8,8 +8,42 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Sat, 08 Apr 2017 12:33:32 GMT</pubDate>
+    <pubDate>Sat, 08 Apr 2017 15:16:44 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>20170407工作日志</title>
+      <link>http://yoursite.com/2017/04/08/20170407%E5%B7%A5%E4%BD%9C%E6%97%A5%E5%BF%97-md/</link>
+      <guid>http://yoursite.com/2017/04/08/20170407%E5%B7%A5%E4%BD%9C%E6%97%A5%E5%BF%97-md/</guid>
+      <pubDate>Sat, 08 Apr 2017 15:06:08 GMT</pubDate>
+      <description>
+      
+        &lt;h2 id=&quot;概要&quot;&gt;&lt;a href=&quot;#概要&quot; class=&quot;headerlink&quot; title=&quot;概要&quot;&gt;&lt;/a&gt;概要&lt;/h2&gt;&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://pages.github.com/&quot; target=&quot;_blank&quot;
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h2 id="概要"><a href="#概要" class="headerlink" title="概要"></a>概要</h2><blockquote>
+<ul>
+<li><a href="https://pages.github.com/" target="_blank" rel="external">GithubPages</a> + <a href="hexo.io">hexo</a> 搭建了<a href="xiaochuhub.github.io">自己的博客</a></li>
+<li>学习hexo的基本用法</li>
+<li>完成<a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="external">]廖雪峰Git</a>后半部分的学习</li>
+<li>使用<a href="http://naotu.baidu.com/" target="_blank" rel="external">百度脑图</a>完成ML的学习路线</li>
+</ul>
+</blockquote>
+<h2 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h2><h3 id="GithubPages-hexo-搭建了自己的博客"><a href="#GithubPages-hexo-搭建了自己的博客" class="headerlink" title="GithubPages + hexo 搭建了自己的博客"></a><a href="https://pages.github.com/" target="_blank" rel="external">GithubPages</a> + <a href="hexo.io">hexo</a> 搭建了<a href="xiaochuhub.github.io">自己的博客</a></h3><ul>
+<li>参考博客</li>
+</ul>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><ul>
+<li>没有必要这么急着学ML吧，当前比较重要的是身体&amp;应有呀</li>
+<li><code>flag1</code> 130</li>
+<li><code>flag2</code> 7</li>
+</ul>
+]]></content:encoded>
+      
+      <comments>http://yoursite.com/2017/04/08/20170407%E5%B7%A5%E4%BD%9C%E6%97%A5%E5%BF%97-md/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>廖雪峰Git学习笔记</title>
