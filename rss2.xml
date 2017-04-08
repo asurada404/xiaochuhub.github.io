@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>会做数学的厨子</title>
+    <link>http://yoursite.com/</link>
+    <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
+    
+    <description></description>
+    <pubDate>Sat, 08 Apr 2017 12:33:32 GMT</pubDate>
+    <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>廖雪峰Git学习笔记</title>
+      <link>http://yoursite.com/2017/04/08/%E5%BB%96%E9%9B%AA%E5%B3%B0%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-md/</link>
+      <guid>http://yoursite.com/2017/04/08/%E5%BB%96%E9%9B%AA%E5%B3%B0%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-md/</guid>
+      <pubDate>Sat, 08 Apr 2017 12:22:58 GMT</pubDate>
+      <description>
+      
+        &lt;h1 id=&quot;廖雪峰Git学习笔记&quot;&gt;&lt;a href=&quot;#廖雪峰Git学习笔记&quot; class=&quot;headerlink&quot; title=&quot;廖雪峰Git学习笔记&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://www.liaoxuefeng.com/wiki/001373951630592
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h1 id="廖雪峰Git学习笔记"><a href="#廖雪峰Git学习笔记" class="headerlink" title="廖雪峰Git学习笔记"></a><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="external">廖雪峰Git</a>学习笔记</h1><h2 id="1-Git安装"><a href="#1-Git安装" class="headerlink" title="1. Git安装"></a>1. Git安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ sudo apt-get install git</div><div class="line">#配置个人信息</div><div class="line">$ git config --global user.name &quot;Your Name&quot;</div><div class="line">$ git config --global user.email &quot;email@example.com&quot;</div></pre></td></tr></table></figure>
+<ul>
+<li>安装GitGUI <a href="https://git-scm.com/download/gui/linux" target="_blank" rel="external">https://git-scm.com/download/gui/linux</a></li>
+<li>GitKraken比较cool <a href="https://www.gitkraken.com/" target="_blank" rel="external">https://www.gitkraken.com/</a></li>
+</ul>
+<hr>
+<h2 id="2-创建版本库"><a href="#2-创建版本库" class="headerlink" title="2. 创建版本库"></a>2. 创建版本库</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ mkdir git-learn</div><div class="line">$ cd git-learn</div><div class="line">$ git init #初始化Git仓储</div><div class="line">$ git add readme.txt #文件添加到仓储</div><div class="line">$ git commit -m &quot;wrote a readme file&quot; #提交文件 -m &quot;说明信息&quot;</div></pre></td></tr></table></figure>
+<hr>
+<h2 id="3-版本信息及修改"><a href="#3-版本信息及修改" class="headerlink" title="3. 版本信息及修改"></a>3. 版本信息及修改</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">#查看Git状态</div><div class="line">$ git status</div><div class="line">#查看file的改动信息</div><div class="line">$ git diff filename</div><div class="line">#查看改动日志</div><div class="line">$ git log</div><div class="line">#退回到上一个版本（ HEAD^表示上一个版本，HEAD~x表示上x个版本</div><div class="line">$ git reset --hard HEAD^</div><div class="line">$ git reset --hard HEAD~x</div><div class="line">#通过版本id（commit_id)退回到原来的版本</div><div class="line">$ git reset --hard commit_id</div><div class="line">#查看命令历史</div><div class="line">$ git reflog</div></pre></td></tr></table></figure>
+<ul>
+<li>HEAD 版本头</li>
+<li>commit_id  提交（版本）id</li>
+</ul>
+<hr>
+<h2 id="4-add-→-commit：暂缓区-→-分支"><a href="#4-add-→-commit：暂缓区-→-分支" class="headerlink" title="4. add → commit：暂缓区 → 分支"></a>4. add → commit：暂缓区 → 分支</h2><h3 id="创建，添加到暂缓区"><a href="#创建，添加到暂缓区" class="headerlink" title="创建，添加到暂缓区"></a>创建，添加到暂缓区</h3><p><img src="https://cdn.rawgit.com/xiaochuhub/MarkdwonImg/592ac149/Img/add-commit.jpg" alt=""></p>
+<h3 id="提交暂缓区的文件到master"><a href="#提交暂缓区的文件到master" class="headerlink" title="提交暂缓区的文件到master"></a>提交暂缓区的文件到master</h3><p><img src="https://cdn.rawgit.com/xiaochuhub/MarkdwonImg/592ac149/Img/create-add.jpg" alt=""></p>
+<hr>
+<h2 id="5-撤销修改"><a href="#5-撤销修改" class="headerlink" title="5. 撤销修改"></a>5. 撤销修改</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git chekout -- filename</div></pre></td></tr></table></figure>
+<ul>
+<li>回到最近一次git add 或者还没有add时的状态</li>
+<li>readme.txt自修改后还没有add到暂存区，撤销修改就回到和版本库一模一样的状态</li>
+<li>readme.txt已经add暂存区后，又作了修改，撤销修改就回到添加到暂存区后的状态</li>
+<li>如果已经add commit到版本库可以使用reset退回</li>
+</ul>
+<hr>
+<h2 id="6-关联远程库"><a href="#6-关联远程库" class="headerlink" title="6. 关联远程库"></a>6. 关联远程库</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">#本地库关联远程库</div><div class="line">$ git remote add origin git@server-name:path/repo-name.git</div><div class="line">#第一次推送master分支的所有内容</div><div class="line"># origin为远程库的Name</div><div class="line">$ git push -u origin master</div><div class="line">#随后的本地提交后</div><div class="line">$ git push origin master</div></pre></td></tr></table></figure>
+<hr>
+<h2 id="7-从远程库下载"><a href="#7-从远程库下载" class="headerlink" title="7. 从远程库下载"></a>7. 从远程库下载</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">#git协议比http快</div><div class="line">$ git clone git@github.com:xiaochuhub/mmd.git</div><div class="line">$ git clone https://github.com/xiaochuhub/mmd.git</div></pre></td></tr></table></figure>
+<hr>
+<h2 id="8-创建和合并分支"><a href="#8-创建和合并分支" class="headerlink" title="8. 创建和合并分支"></a>8. 创建和合并分支</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">#查看分支</div><div class="line">$ git branch</div><div class="line">#创建分支</div><div class="line">$ git branch &lt;name&gt;</div><div class="line">#切换分支</div><div class="line">$ git checkout &lt;name&gt;</div><div class="line">#创建+切换分支</div><div class="line">$ git checkout -b &lt;name&gt;</div><div class="line">#合并某分支到当前分支</div><div class="line">$ git merge &lt;name&gt;</div><div class="line">#删除分支</div><div class="line">$ git branch -d &lt;name&gt;</div></pre></td></tr></table></figure>
+<h3 id="演示动画"><a href="#演示动画" class="headerlink" title="演示动画"></a>演示动画</h3><p><video id="video" controls preload="none" poster="https://cdn.rawgit.com/xiaochuhub/MarkdwonImg/c311950d/Img/gitfengmian.jpg"><br>      <source id="mp4" src="https://cdn.rawgit.com/xiaochuhub/MarkdwonImg/592ac149/videos/master-and-dev-ff.mp4" type="video/mp4"></video></p>
+<pre><code>&lt;p&gt;Your user agent does not support the HTML5 Video element.&lt;/p&gt;
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">-----------------------------------------------------------------</div><div class="line">## 9. 冲突</div><div class="line">```shell</div><div class="line">$ cat README.md</div><div class="line">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</div><div class="line">xxxxxxxWWWWWWLLLLLLLL   # 这是来自当前分支的修改</div><div class="line">=======</div><div class="line">xxxxxxxaAAAAAAA            # 这是来自feature1分支的修改</div><div class="line">&gt;&gt;&gt;&gt;&gt;&gt;&gt; feature1</div><div class="line"></div><div class="line">$ git log --graph --pretty=oneline --abbrev-commit</div><div class="line">*   59bc1cb conflict fixed</div><div class="line">|\</div><div class="line">| * 75a857c AND simple</div><div class="line">* | 400b400 &amp; simple</div><div class="line">|/</div><div class="line">* fec145a branch test</div><div class="line">...</div></pre></td></tr></table></figure>
+<hr>
+<h2 id="10-分支结构-分支使用"><a href="#10-分支结构-分支使用" class="headerlink" title="10. 分支结构(分支使用)"></a>10. 分支结构(分支使用)</h2><p><img src="https://cdn.rawgit.com/xiaochuhub/MarkdwonImg/592ac149/Img/branch-structrue.png" alt=""><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git branch -D branchname #强行删除分支（未合并）</div></pre></td></tr></table></figure></p>
+<hr>
+<h2 id="10-Bug-分支"><a href="#10-Bug-分支" class="headerlink" title="10. Bug 分支"></a>10. Bug 分支</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">#保存手头的工作，创建新的分支修bug</div><div class="line">$ git stash #保留现场</div><div class="line">$ git stash list #查看现场</div><div class="line">$ git stash pop #回到现场，并删除现场记录</div><div class="line">$ git stash apply #回到现场，保留现场记录</div><div class="line">$ git stash drop  #删除现场记录</div></pre></td></tr></table></figure>
+<hr>
+<h2 id="11-多人协作"><a href="#11-多人协作" class="headerlink" title="11. 多人协作"></a>11. 多人协作</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ git remote -v #查看远程库信息</div><div class="line">$ git push origin master #推送master分支到远程库</div><div class="line">$ git push origin dev #推送dev分支到远程库</div></pre></td></tr></table></figure>
+<ul>
+<li>master分支是主分支，因此要时刻与远程同步；</li>
+<li>dev分支是开发分支，团队所有成员都需要在上面工作，所以也需要与远程同步；</li>
+<li>bug分支只用于在本地修复bug，就没必要推到远程了，除非老板要看看你每周到底修复了几个bug；</li>
+<li>feature分支是否推到远程，取决于你是否和你的小伙伴合作在上面开发。</li>
+</ul>
+<hr>
+<h2 id="12-tag"><a href="#12-tag" class="headerlink" title="12. tag"></a>12. tag</h2><h3 id="tag是commit-id的语义化（快照，不能移动的分支"><a href="#tag是commit-id的语义化（快照，不能移动的分支" class="headerlink" title="tag是commit id的语义化（快照，不能移动的分支"></a>tag是commit id的语义化（快照，不能移动的分支</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">#打标签(省略commit_id就是为当前状态打ｔａｇ)</div><div class="line">$ git tag &lt;name&gt; commit_id</div><div class="line">#打标签并附上说明信息</div><div class="line">$ git tag -a &lt;name&gt; -m &apos;guide message&apos;  commit_id</div><div class="line">＃打PGP标签，必须安装GPG</div><div class="line">$ git tag -s &lt;tagname&gt; -m &apos;guide message&apos; commit_id</div><div class="line">＃查看标签</div><div class="line">$ git tag　</div><div class="line">#推送tag到远程</div><div class="line">$ git push origin  &lt;tagname&gt;</div><div class="line">#推送所有的tag到远程</div><div class="line">$ git push origin  --tags</div><div class="line">＃删除所有的tag</div><div class="line">$ git tag -d &lt;tagname&gt;</div><div class="line">#删除远程tag</div><div class="line">$ git push origin :refs/tags/&lt;tagname&gt;</div></pre></td></tr></table></figure>
+]]></content:encoded>
+      
+      <comments>http://yoursite.com/2017/04/08/%E5%BB%96%E9%9B%AA%E5%B3%B0%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-md/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>在markdown中添加视频.md</title>
+      <link>http://yoursite.com/2017/04/08/%E5%9C%A8markdown%E4%B8%AD%E6%B7%BB%E5%8A%A0%E8%A7%86%E9%A2%91-md/</link>
+      <guid>http://yoursite.com/2017/04/08/%E5%9C%A8markdown%E4%B8%AD%E6%B7%BB%E5%8A%A0%E8%A7%86%E9%A2%91-md/</guid>
+      <pubDate>Sat, 08 Apr 2017 09:50:14 GMT</pubDate>
+      <description>
+      
+        &lt;video id=&quot;video&quot; controls preload=&quot;none&quot; poster=&quot;http://media.w3.org/2010/05/sintel/poster.png&quot;&gt;&lt;br&gt;      &lt;source id=&quot;mp4&quot; src=&quot;http://medi
+      
+      </description>
+      
+      <content:encoded><![CDATA[<video id="video" controls preload="none" poster="http://media.w3.org/2010/05/sintel/poster.png"><br>      <source id="mp4" src="http://media.w3.org/2010/05/sintel/trailer.mp4" type="video/mp4"><br>      <source id="webm" src="http://media.w3.org/2010/05/sintel/trailer.webm" type="video/webm"><br>      <source id="ogv" src="http://media.w3.org/2010/05/sintel/trailer.ogv" type="video/ogg"><br>      <p>Your user agent does not support the HTML5 Video element.</p><br></video>
+
+<hr>
+<h3 id="不需要标注HTML"><a href="#不需要标注HTML" class="headerlink" title="不需要标注HTML"></a>不需要标注<code>HTML</code></h3>]]></content:encoded>
+      
+      <comments>http://yoursite.com/2017/04/08/%E5%9C%A8markdown%E4%B8%AD%E6%B7%BB%E5%8A%A0%E8%A7%86%E9%A2%91-md/#disqus_thread</comments>
+    </item>
+    
+  </channel>
+</rss>
